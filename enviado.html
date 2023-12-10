@@ -66,14 +66,19 @@
     }
 
      function logar() {
-         var login = document.getElementById('login').value;
-         var senha = document.getElementById('s').value;
+         var login0 = document.getElementById('login').value;
+         var senha0 = document.getElementById('s').value;
 
-         if(login == "admin" && senha == "admin"){
-              return openModal();
+        var login =login0.toLowerCase();
+        var senha =senha0.toLowerCase();
+
+        console.log(login,senha);
+
+         if(login == "tech_sustentavel" && senha == "sustentabilidade"){
+            location.href = "https://alissoned.github.io/Tech-sustentavel/Menu/home.html";
 
 
-         } else if(login != "admin") {
+         } else if(login != "tech_sustentavel") {
               alert('Usuario incorreto');
               document.getElementById('login').value = '';
               document.getElementById('s').value = '';
